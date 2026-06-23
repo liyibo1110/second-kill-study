@@ -1,0 +1,2 @@
+dubboExceptionFilter=com.github.liyibo1110.secondkill.common.dubbo.DubboExceptionFilter
+traceFilter=com.github.liyibo1110.secondkill.common.trace.TraceDubboFilter

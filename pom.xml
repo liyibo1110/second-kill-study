@@ -10,6 +10,7 @@
     <packaging>pom</packaging>
     <modules>
         <module>second-kill-common</module>
+        <module>second-kill-gateway</module>
     </modules>
 
     <properties>

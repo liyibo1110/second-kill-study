@@ -1,0 +1,4 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+  com.github.liyibo1110.secondkill.common.mybatis.config.MybatisPlusAutoConfiguration,\
+  com.github.liyibo1110.secondkill.common.jackson.JacksonAutoConfiguration,\
+  com.github.liyibo1110.secondkill.common.trace.TraceAutoConfiguration

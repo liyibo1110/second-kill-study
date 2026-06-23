@@ -1,0 +1,40 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: second-kill-gateway
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
+      config:
+        server-addr: 127.0.0.1:8848
+        file-extension: yaml
+    sentinel:
+      transport:
+        dashboard: 127.0.0.1:8858
+      eager: true
+    gateway:
+      discovery:
+        locator:
+          enabled: false
+      routes:
+        - id: second-kill-service
+          uri: lb://second-kill-service
+          predicates:
+            - Path=/api/secondkill/**
+          filters:
+            - StripPrefix=1
+        - id: second-kill-admin
+          uri: lb://second-kill-admin
+          predicates:
+            - Path=/api/admin/**
+          filters:
+            - StripPrefix=1
+        - id: second-kill-support
+          uri: lb://second-kill-support
+          predicates:
+            - Path=/api/support/**
+          filters:
+            - StripPrefix=1
