@@ -1,0 +1,37 @@
+dataSources:
+  ds0:
+    dataSourceClassName: com.zaxxer.hikari.HikariDataSource
+    driverClassName: com.mysql.cj.jdbc.Driver
+    jdbcUrl: jdbc:mysql://localhost:3306/demo?useUnicode=true&characterEncoding=utf8&useSSL=false&serverTimezone=Asia/Shanghai
+    username: root
+    password: 123456
+
+rules:
+  - !SHARDING
+    tables:
+      sk_order:
+        actualDataNodes: ds0.sk_order_${0..3}
+        tableStrategy:
+          complex:
+            shardingColumns: user_id,order_no
+            shardingAlgorithmName: order-complex-sharding
+      sk_order_item:
+        actualDataNodes: ds0.sk_order_item_${0..3}
+        tableStrategy:
+          standard:
+            shardingColumn: order_no
+            shardingAlgorithmName: order-item-sharding
+    shardingAlgorithms:
+      order-complex-sharding:
+        type: CLASS_BASED
+        props:
+          strategy: COMPLEX
+          algorithmClassName: com.github.liyibo1110.secondkill.base.sharding.OrderComplexShardingAlgorithm
+      order-item-sharding:
+        type: CLASS_BASED
+        props:
+          strategy: STANDARD
+          algorithmClassName: com.github.liyibo1110.secondkill.base.sharding.OrderItemShardingAlgorithm
+
+props:
+  sql-show: true

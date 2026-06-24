@@ -2,6 +2,7 @@ package com.github.liyibo1110.secondkill.common.log;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.github.liyibo1110.secondkill.common.trace.TraceContext;
 import lombok.extern.slf4j.Slf4j;
 import org.slf4j.Logger;
 

@@ -11,6 +11,8 @@
     <modules>
         <module>second-kill-common</module>
         <module>second-kill-gateway</module>
+        <module>second-kill-base</module>
+        <module>second-kill-support</module>
     </modules>
 
     <properties>
@@ -61,7 +63,7 @@
         <maven-compiler-plugin.version>3.8.1</maven-compiler-plugin.version>
 
         <!-- Internal Modules -->
-        <seckill.version>1.0.0</seckill.version>
+        <second.kill.version>1.0.0</second.kill.version>
     </properties>
 
     <dependencyManagement>
@@ -104,29 +106,29 @@
 
             <!-- Internal Modules -->
             <dependency>
-                <groupId>com.seckill</groupId>
-                <artifactId>seckill-common</artifactId>
-                <version>${seckill.version}</version>
+                <groupId>com.github.liyibo1110</groupId>
+                <artifactId>second-kill-common</artifactId>
+                <version>${second.kill.version}</version>
             </dependency>
             <dependency>
-                <groupId>com.seckill</groupId>
-                <artifactId>seckill-base-api</artifactId>
-                <version>${seckill.version}</version>
+                <groupId>com.github.liyibo1110</groupId>
+                <artifactId>second-kill-base-api</artifactId>
+                <version>${second.kill.version}</version>
             </dependency>
             <dependency>
-                <groupId>com.seckill</groupId>
-                <artifactId>seckill-support-api</artifactId>
-                <version>${seckill.version}</version>
+                <groupId>com.github.liyibo1110</groupId>
+                <artifactId>second-kill-support-api</artifactId>
+                <version>${second.kill.version}</version>
             </dependency>
             <dependency>
-                <groupId>com.seckill</groupId>
-                <artifactId>seckill-service-api</artifactId>
-                <version>${seckill.version}</version>
+                <groupId>com.github.liyibo1110</groupId>
+                <artifactId>second-kill-service-api</artifactId>
+                <version>${second.kill.version}</version>
             </dependency>
             <dependency>
-                <groupId>com.seckill</groupId>
-                <artifactId>seckill-admin-api</artifactId>
-                <version>${seckill.version}</version>
+                <groupId>com.github.liyibo1110</groupId>
+                <artifactId>second-kill-admin-api</artifactId>
+                <version>${second.kill.version}</version>
             </dependency>
 
             <!-- Database -->

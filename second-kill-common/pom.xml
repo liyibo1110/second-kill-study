@@ -7,6 +7,7 @@
         <groupId>com.github.liyibo1110</groupId>
         <artifactId>second-kill-study</artifactId>
         <version>1.0.0</version>
+        <relativePath>../pom.xml</relativePath>
     </parent>
 
     <properties>
