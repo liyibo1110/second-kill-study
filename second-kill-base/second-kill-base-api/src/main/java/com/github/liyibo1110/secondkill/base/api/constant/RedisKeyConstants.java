@@ -15,81 +15,81 @@ public final class RedisKeyConstants {
     // ==================== 活动相关 ====================
 
     /** 秒杀活动详情，拼接活动ID */
-    public static final String ACTIVITY_INFO = "seckill:activity:info:";
+    public static final String ACTIVITY_INFO = "secondkill:activity:info:";
 
     /** 秒杀活动状态，拼接活动ID */
-    public static final String ACTIVITY_STATUS = "seckill:activity:status:";
+    public static final String ACTIVITY_STATUS = "secondkill:activity:status:";
 
     /** 秒杀活动商品列表，拼接活动ID */
-    public static final String ACTIVITY_PRODUCT_LIST = "seckill:activity:product:list:";
+    public static final String ACTIVITY_PRODUCT_LIST = "secondkill:activity:product:list:";
 
     // ==================== 商品与库存相关 ====================
 
     /** 商品SKU库存，拼接活动ID:skuId */
-    public static final String PRODUCT_SKU_STOCK = "seckill:product:sku:stock:";
+    public static final String PRODUCT_SKU_STOCK = "secondkill:product:sku:stock:";
 
     /** 商品SKU详情，拼接skuNo */
-    public static final String PRODUCT_SKU_INFO = "seckill:product:sku:info:";
+    public static final String PRODUCT_SKU_INFO = "secondkill:product:sku:info:";
 
     /** 商品SKU关联关系，拼接活动ID */
-    public static final String PRODUCT_SKU_RELATION = "seckill:product:sku:relation:";
+    public static final String PRODUCT_SKU_RELATION = "secondkill:product:sku:relation:";
 
     /** 库存扣减锁，拼接活动ID:skuId */
-    public static final String STOCK_DEDUCT_LOCK = "seckill:stock:deduct:lock:";
+    public static final String STOCK_DEDUCT_LOCK = "secondkill:stock:deduct:lock:";
 
     // ==================== 订单相关 ====================
 
     /** 秒杀订单队列，拼接活动ID */
-    public static final String ORDER_QUEUE = "seckill:order:queue:";
+    public static final String ORDER_QUEUE = "secondkill:order:queue:";
 
     /** 秒杀订单详情，拼接订单ID */
-    public static final String ORDER_DETAIL = "seckill:order:detail:";
+    public static final String ORDER_DETAIL = "secondkill:order:detail:";
 
     /** 排队状态，拼接用户ID:活动ID */
-    public static final String ORDER_QUEUING = "seckill:order:queuing:";
+    public static final String ORDER_QUEUING = "secondkill:order:queuing:";
 
     // ==================== 用户相关 ====================
 
     /** 用户限购计数，拼接用户ID:活动ID:商品ID */
-    public static final String USER_PURCHASE_LIMIT = "seckill:user:purchase:limit:";
+    public static final String USER_PURCHASE_LIMIT = "secondkill:user:purchase:limit:";
 
     /** 用户信息缓存，拼接用户ID */
-    public static final String USER_INFO = "seckill:user:info:";
+    public static final String USER_INFO = "secondkill:user:info:";
 
     /** 用户收货地址，Hash类型，拼接用户ID */
-    public static final String USER_ADDRESS = "seckill:user:address:";
+    public static final String USER_ADDRESS = "secondkill:user:address:";
 
     // ==================== 风控与限流 ====================
 
     /** 接口限流配置，拼接活动ID */
-    public static final String RATE_LIMIT = "seckill:rate:limit:";
+    public static final String RATE_LIMIT = "secondkill:rate:limit:";
 
     /** 机审校验随机串，拼接用户ID */
-    public static final String MACHINE_CHECK = "seckill:machine:check:";
+    public static final String MACHINE_CHECK = "secondkill:machine:check:";
 
     /** 用户级限流器，拼接用户ID */
-    public static final String USER_RATE_LIMIT = "seckill:user:rate:limit:";
+    public static final String USER_RATE_LIMIT = "secondkill:user:rate:limit:";
 
     /** 风险用户黑名单，拼接用户ID */
-    public static final String RISK_USER = "seckill:risk:user:";
+    public static final String RISK_USER = "secondkill:risk:user:";
 
     // ==================== 消费结果 ====================
 
     /** 秒杀订单处理结果，拼接traceId，消费端写入，前端轮询读取 */
-    public static final String ORDER_RESULT = "seckill:order:result:";
+    public static final String ORDER_RESULT = "secondkill:order:result:";
 
     // ==================== 分布式锁 ====================
 
     /** 支付状态更新锁，拼接订单ID */
-    public static final String PAYMENT_UPDATE_LOCK = "seckill:payment:update:lock:";
+    public static final String PAYMENT_UPDATE_LOCK = "secondkill:payment:update:lock:";
 
     // ==================== 订单同步 ====================
 
     /** 订单同步对账列表（Redis List），支付成功后追加订单号，对账任务消费 */
-    public static final String ORDER_SYNC_LIST = "seckill:order:sync:list";
+    public static final String ORDER_SYNC_LIST = "secondkill:order:sync:list";
 
     /** 订单同步幂等Set，已同步成功的订单号缓存，防止重复写入主域 */
-    public static final String ORDER_SYNC_DONE = "seckill:order:sync:done";
+    public static final String ORDER_SYNC_DONE = "secondkill:order:sync:done";
 
     // ==================== Key 拼接工具方法 ====================
 

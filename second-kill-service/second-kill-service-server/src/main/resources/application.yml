@@ -1,0 +1,50 @@
+server:
+  port: 8083
+
+spring:
+  application:
+    name: second-kill-service
+  redis:
+    host: 127.0.0.1
+    port: 6379
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
+      config:
+        server-addr: 127.0.0.1:8848
+        file-extension: yaml
+
+dubbo:
+  application:
+    name: second-kill-service
+  protocol:
+    name: dubbo
+    port: 20883
+  registry:
+    address: nacos://127.0.0.1:8848
+  consumer:
+    check: false
+
+rocketmq:
+  name-server: 127.0.0.1:9876
+  producer:
+    group: second-kill-service-producer
+    send-message-timeout: 3000
+    retry-times-when-send-failed: 2
+
+secondkill:
+  machine-check:
+    enabled: true
+    random-length: 16
+    ttl-seconds: 30
+  user-rate-limit:
+    enabled: true
+    rate: 10
+    interval: 10
+    expire-minutes: 5
+  black-list:
+    enabled: true
+    mark-start-seconds: 300
+    mark-end-seconds: 10
+    expire-seconds: 300

@@ -13,6 +13,7 @@
         <module>second-kill-gateway</module>
         <module>second-kill-base</module>
         <module>second-kill-support</module>
+        <module>second-kill-service</module>
     </modules>
 
     <properties>
