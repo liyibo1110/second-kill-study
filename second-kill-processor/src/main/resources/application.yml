@@ -1,0 +1,30 @@
+server:
+  port: 8085
+
+spring:
+  application:
+    name: second-kill-processor
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
+      config:
+        server-addr: 127.0.0.1:8848
+        file-extension: yaml
+
+dubbo:
+  application:
+    name: second-kill-processor
+  protocol:
+    name: dubbo
+    port: 20885
+  registry:
+    address: nacos://127.0.0.1:8848
+  consumer:
+    check: false
+
+rocketmq:
+  name-server: 127.0.0.1:9876
+  consumer:
+    group: second-kill-processor-consumer
+    pull-batch-size: 32
