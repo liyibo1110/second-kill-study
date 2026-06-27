@@ -1,0 +1,24 @@
+server:
+  port: 8084
+
+spring:
+  application:
+    name: second-kill-admin
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
+      config:
+        server-addr: 127.0.0.1:8848
+        file-extension: yaml
+
+dubbo:
+  application:
+    name: second-kill-admin
+  protocol:
+    name: dubbo
+    port: 20884
+  registry:
+    address: nacos://127.0.0.1:8848
+  consumer:
+    check: false
