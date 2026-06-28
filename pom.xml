@@ -16,6 +16,7 @@
         <module>second-kill-service</module>
         <module>second-kill-processor</module>
         <module>second-kill-admin</module>
+        <module>second-kill-job</module>
     </modules>
 
     <properties>

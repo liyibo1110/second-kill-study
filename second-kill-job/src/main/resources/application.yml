@@ -1,0 +1,39 @@
+server:
+  port: 8086
+
+spring:
+  application:
+    name: second-kill-job
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
+      config:
+        server-addr: 127.0.0.1:8848
+        file-extension: yaml
+  redis:
+    host: 127.0.0.1
+    port: 6379
+    database: 0
+
+dubbo:
+  application:
+    name: second-kill-job
+  protocol:
+    name: dubbo
+    port: 20886
+  registry:
+    address: nacos://127.0.0.1:8848
+  consumer:
+    check: false
+
+xxl:
+  job:
+    admin:
+      addresses: http://127.0.0.1:8180/xxl-job-admin
+    accessToken: default_token
+    executor:
+      appname: second-kill-job-executor
+      port: 9999
+      logpath: ./logs/xxl-job
+      logretentiondays: 30
